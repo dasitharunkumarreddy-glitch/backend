@@ -27,6 +27,12 @@ npm run dev
 ```text
 http://localhost:3000
 ```
+### 4. Live Link 
+
+```text
+https://lab-2-m6b7.onrender.com/books/
+```
+
 
 ## API Endpoints
 
