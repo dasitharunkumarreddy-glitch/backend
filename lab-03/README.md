@@ -2,9 +2,9 @@
 
 ## Student Details
 
-- **Name:** Your Name
-- **Registration Number:** Your Registration Number
-- **Section:** Your Section
+- **Name:** Tharun kumar reddy
+- **Registration Number:** 252U1R9028
+- **Section:** Gen-AI 2A
 - **Course:** Backend Development Fundamentals
 
 ## Objective
