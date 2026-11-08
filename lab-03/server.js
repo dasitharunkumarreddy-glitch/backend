@@ -4,7 +4,7 @@ const sqlite = require("sqlite");
 const sqlite3 = require("sqlite3");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -228,6 +228,17 @@ const initializeDBAndServer = async () => {
             filename: "./database.db",
             driver: sqlite3.Database,
         });
+
+        // Create table if it doesn't exist (needed on ephemeral filesystems like Render)
+        await db.run(`
+            CREATE TABLE IF NOT EXISTS book (
+                id     INTEGER PRIMARY KEY AUTOINCREMENT,
+                title  TEXT    NOT NULL,
+                author TEXT    NOT NULL,
+                price  REAL    NOT NULL,
+                pages  INTEGER NOT NULL
+            )
+        `);
 
         console.log("Database connected successfully");
 
